@@ -25,7 +25,6 @@ test = pd.read_csv(r'test_data.csv',encoding='utf-8').values[:,1:]
 train = data[:,1:6001]
 labels = np.array(data[:,-1],dtype=np.int)
 
-
 x_train= fft(train).real
 
 train_x,test_x,train_y,test_y = train_test_split(x_train,labels,test_size=0.2,random_state=0)
